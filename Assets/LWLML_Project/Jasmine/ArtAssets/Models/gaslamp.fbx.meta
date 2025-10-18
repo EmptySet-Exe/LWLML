@@ -1,29 +1,9 @@
 fileFormatVersion: 2
-guid: ea8037e8277ec4b4aab671c5fed2bb80
+guid: 4b522c1d90e032841aa6be69ff36be05
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Rough plaster
-    second: {fileID: 2100000, guid: f9421955867082d42b7dd71f736634ad, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: glass
-    second: {fileID: 2100000, guid: 877f12eb2c834aa42a04218f13461f62, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: old  Plywood
-    second: {fileID: 2100000, guid: 10eca8e7938df4743b10c75c17284ae6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: old wood planks
-    second: {fileID: 2100000, guid: 29cca58c65700494d81ab6e6e0bebeb7, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
