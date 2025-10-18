@@ -16,12 +16,12 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        ExitScript.entered += GameEnd;
+        DoorManager.entered += GameEnd;
     }
 
     private void OnDisable()
     {
-        ExitScript.entered += GameEnd;
+        DoorManager.entered += GameEnd;
     }
 
 
