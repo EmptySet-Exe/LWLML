@@ -25,6 +25,8 @@ public class PaperLogic : MonoBehaviour
     //Method to change the current drawing type
     public void SetDrawingType(int drawingType)
     {
+        //debug log to confirm method is called
+        Debug.Log("SetDrawingType called, changing to drawing type: " + drawingType);
         currentDrawingType = drawingType;
         UpdateDrawing();
     }
@@ -32,6 +34,8 @@ public class PaperLogic : MonoBehaviour
     //Method to change the drawing based on the currentDrawingType
     public void UpdateDrawing()
     {
+        //debug log to confirm method is called
+        Debug.Log("UpdateDrawing called, current drawing type: " + currentDrawingType);
         switch (currentDrawingType)
         {
             case 1:

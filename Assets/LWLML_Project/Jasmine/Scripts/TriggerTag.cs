@@ -9,6 +9,8 @@ public class TriggerTag : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
+        //debug log
+        Debug.Log("Collision detected with object: " + collision.gameObject.name);
         if (collision.gameObject.CompareTag(tagName))
         {
             trigger.Invoke();   // Sends the signal
