@@ -102,3 +102,7 @@ InitTestScene*.unity*
 
 FastScriptReload.meta
 /[Aa]ssets/FastScriptReload/*
+
+# having problems with the slnx file
+LWLML.slnx
+*.slnx
