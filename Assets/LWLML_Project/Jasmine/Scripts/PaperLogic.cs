@@ -16,8 +16,29 @@ public class PaperLogic : MonoBehaviour
     public Material drawing2;
     public Material drawing3;
     public Material drawing4;
+    //reference to the right drawing type 
+    public int correctDrawingType;
 
     //method to turn on the paper UI
+    //calls a public unity event when the correct drawing type is true 
+    //calls a public unity event when the wrong drawing is done 
+    public bool isCorrectDrawing;
+    //public unity event for the paper puzzle manager to listen to
+    public UnityEvent onDrawingChange; 
+
+    public void CheckDrawing()
+    {
+        if (currentDrawingType == correctDrawingType)
+        {
+            Debug.Log("Correct drawing!");
+            isCorrectDrawing = true;
+        }
+        else
+        {
+            Debug.Log("Wrong drawing!");
+            isCorrectDrawing = false;
+        }
+    }
     public void ShowPaperUI()
     {
         paperUI.SetActive(true);
@@ -27,8 +48,11 @@ public class PaperLogic : MonoBehaviour
     {
         //debug log to confirm method is called
         Debug.Log("SetDrawingType called, changing to drawing type: " + drawingType);
+
         currentDrawingType = drawingType;
+
         UpdateDrawing();
+         onDrawingChange.Invoke();
     }
 
     //Method to change the drawing based on the currentDrawingType
