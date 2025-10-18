@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
 
     [SerializeField] public static event Action<bool> isCleared;
-    [SerializeField] private ReceiverManager receivers;
+    [SerializeField] private CubbyManager receivers;
 
 
     private void OnEnable()

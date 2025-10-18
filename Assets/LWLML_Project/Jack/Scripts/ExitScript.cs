@@ -9,12 +9,12 @@ public class ExitScript : MonoBehaviour
 
     private void OnEnable()
     {
-        ReceiverManager.taskCompletion += Open;
+        CubbyManager.taskCompletion += Open;
     }
 
     private void OnDisable()
     {
-        ReceiverManager.taskCompletion -= Open;
+        CubbyManager.taskCompletion -= Open;
     }
 
     void Open()

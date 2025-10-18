@@ -1,10 +1,10 @@
 using System;
 using UnityEngine;
 
-public class ReceiverManager : MonoBehaviour
+public class CubbyManager : MonoBehaviour
 {
-    // This will aggragate receivers
-    ReceiverScript[] recievers;
+    // This will aggregate receivers
+    CubbyScript[] recievers;
     public static event Action taskCompletion;
     [SerializeField] int MAX_TASK_COUNT = 3;
     int count = 0;
@@ -13,20 +13,20 @@ public class ReceiverManager : MonoBehaviour
     void Start()
     {
         // Aggregate all the Receivers
-        recievers = GetComponentsInChildren<ReceiverScript>();
+        recievers = GetComponentsInChildren<CubbyScript>();
     }
 
     void Update()
     {
         count = 0; // Reset Count
 
-        foreach (ReceiverScript receiver in recievers)
+        foreach (CubbyScript receiver in recievers)
             if (receiver.completeFlag)
                 count++;
 
         Debug.Log("Count is " + count);
 
-        // Win State
+        // Complete Task State!
         if (count >= MAX_TASK_COUNT)
             taskCompletion?.Invoke();
     }
