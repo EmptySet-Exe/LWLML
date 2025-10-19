@@ -11,11 +11,12 @@ public class PaperLogic : MonoBehaviour
     //correct drawing type represented as an integer
     public int currentDrawingType;
     //is correct drawing 
-    //reference to 4 materials for the 4 drawings
+    //reference to 5 materials for the 5 drawings
     public Material drawing1;
     public Material drawing2;
     public Material drawing3;
     public Material drawing4;
+    public Material drawing5;
     //reference to the right drawing type 
     public int correctDrawingType;
 
@@ -73,6 +74,9 @@ public class PaperLogic : MonoBehaviour
                 break;
             case 4:
                 drawingRenderer.material = drawing4;
+                break;
+            case 5:
+                drawingRenderer.material = drawing5;
                 break;
             default:
                 Debug.LogWarning("Invalid drawing type");
