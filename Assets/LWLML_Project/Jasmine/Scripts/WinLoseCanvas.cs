@@ -15,7 +15,7 @@ public class WinLoseCanvas : MonoBehaviour
         //slowly increase the alpha of the background image to white
         StartCoroutine(FadeToColor(Color.white));
         //once corutine is done changing color, wait for 1 second and then have the scene reload
-        StartCoroutine(ReloadSceneAfterDelay(1f));
+        StartCoroutine(ReloadSceneAfterDelay(10f));
 
 
     }
@@ -25,12 +25,12 @@ public class WinLoseCanvas : MonoBehaviour
         //slowly increase the alpha of the background image to black
         StartCoroutine(FadeToColor(Color.black));
         //once corutine is done changing color, wait for 1 second and then have the scene reload
-        StartCoroutine(ReloadSceneAfterDelay(1f));
+        StartCoroutine(ReloadSceneAfterDelay(10f));
     }
 
     private IEnumerator FadeToColor(Color targetColor)
     {
-        float duration = 1f;
+        float duration = 10f;
         float elapsed = 0f;
         Color initialColor = backgroundImage.color;
 
@@ -49,5 +49,5 @@ public class WinLoseCanvas : MonoBehaviour
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    
+
 }
