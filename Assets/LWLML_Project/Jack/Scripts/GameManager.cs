@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     private void OnDisable()
     {
-        DoorManager.entered += GameEnd;
+        ExitScript.entered -= GameEnd;
     }
 
 
