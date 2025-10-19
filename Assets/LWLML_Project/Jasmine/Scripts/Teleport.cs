@@ -20,6 +20,8 @@ public class Teleport : MonoBehaviour
             Teleport otherTeleportScript = otherTeleport.GetComponent<Teleport>();
             if (otherTeleportScript != null)
             {
+                //debug log
+                Debug.Log("Teleporting object: " + obj.name + " to " + otherTeleport.name);
                 obj.transform.position = otherTeleportScript.attachPoint.position;
                 obj.transform.rotation = otherTeleportScript.attachPoint.rotation;
             }

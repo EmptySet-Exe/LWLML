@@ -15,6 +15,11 @@ public class DoorActivation : MonoBehaviour
 
     //public method for the door to play its animation
     //it also does a door check where if the bool on it is tru or false it will result in winning or losing
+    public void MakeDoorRight()
+    {
+        
+        isCorrectDoor = true;
+    }
     public void ActivateDoor()
     {
         
