@@ -5,7 +5,7 @@ public class CubbyManager : MonoBehaviour
 {
     // This will aggregate receivers
     CubbyScript[] recievers;
-    public static event Action taskCompletion;
+    public static event Action taskComplete;
     [SerializeField] int MAX_TASK_COUNT = 3;
     int count = 0;
 
@@ -28,6 +28,6 @@ public class CubbyManager : MonoBehaviour
 
         // Complete Task State!
         if (count >= MAX_TASK_COUNT)
-            taskCompletion?.Invoke();
+            taskComplete?.Invoke();
     }
 }
