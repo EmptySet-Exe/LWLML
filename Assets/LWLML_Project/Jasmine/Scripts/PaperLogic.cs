@@ -50,7 +50,7 @@ public class PaperLogic : MonoBehaviour
         Debug.Log("SetDrawingType called, changing to drawing type: " + drawingType);
 
         currentDrawingType = drawingType;
-
+        CheckDrawing();
         UpdateDrawing();
          onDrawingChange.Invoke();
     }
