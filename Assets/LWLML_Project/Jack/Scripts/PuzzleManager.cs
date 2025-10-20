@@ -28,6 +28,7 @@ public class PuzzleManager : MonoBehaviour
 
     void Update()
     {
+        /*
         if (Input.GetKeyDown("l"))
             ChangeStage(1);
         else if (Input.GetKeyDown("j"))
@@ -35,6 +36,7 @@ public class PuzzleManager : MonoBehaviour
 
         if (Input.GetMouseButton(0))
             papPuzz.finishedStage2?.Invoke();
+            */
     }
 
     void ChangeStage(int change)
