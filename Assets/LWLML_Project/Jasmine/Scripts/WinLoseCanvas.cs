@@ -6,43 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class WinLoseCanvas : MonoBehaviour
 {
-    //public reference to an image color component 
-    public Image backgroundImage;
 
 
-    public void SetWinBackgroundColor()
+    //public ref for float delay time before reloading scene
+    public float delayBeforeReload = 3f;
+    //public method to call ienumerator for reloading scene
+    public void ReloadSceneWithDelay()
     {
-        //slowly increase the alpha of the background image to white
-        StartCoroutine(FadeToColor(Color.white));
-        //once corutine is done changing color, wait for 1 second and then have the scene reload
-        StartCoroutine(ReloadSceneAfterDelay(10f));
-
-
+        StartCoroutine(ReloadSceneAfterDelay(delayBeforeReload));
     }
 
-    public void SetLoseBackgroundColor()
-    {
-        //slowly increase the alpha of the background image to black
-        StartCoroutine(FadeToColor(Color.black));
-        //once corutine is done changing color, wait for 1 second and then have the scene reload
-        StartCoroutine(ReloadSceneAfterDelay(10f));
-    }
 
-    private IEnumerator FadeToColor(Color targetColor)
-    {
-        float duration = 10f;
-        float elapsed = 0f;
-        Color initialColor = backgroundImage.color;
 
-        while (elapsed < duration)
-        {
-            backgroundImage.color = Color.Lerp(initialColor, targetColor, elapsed / duration);
-            elapsed += Time.deltaTime;
-            yield return null;
-        }
 
-        backgroundImage.color = targetColor;
-    }
     //reload scene after delay
     private IEnumerator ReloadSceneAfterDelay(float delay)
     {
